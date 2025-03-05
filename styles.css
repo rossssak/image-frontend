@@ -1,0 +1,434 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#searchInput {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    outline: none;
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#searchInput:focus {
+    border-color: #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+#searchButton {
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #ff6f61, #ff4a4a);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#searchButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 111, 97, 0.4);
+}
+
+/* Image Form */
+#imageForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+#imageForm input, #imageForm textarea {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#imageForm input::placeholder, #imageForm textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#imageForm input:focus, #imageForm textarea:focus {
+    border-color: #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+#imageForm button {
+    padding: 15px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#imageForm button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 198, 255, 0.4);
+}
+
+/* Gallery */
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.image-card {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.image-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.image-card h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.image-card p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+}
+
+.image-card .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.image-card button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card button.edit {
+    background: linear-gradient(135deg, #f1c40f, #f39c12);
+    color: #fff;
+}
+
+.image-card button.edit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(241, 196, 15, 0.4);
+}
+
+.image-card button.delete {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: #fff;
+}
+
+.image-card button.delete:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+
+/* เพิ่มสไตล์สำหรับปุ่ม Cancel */
+#cancelButton {
+    padding: 15px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 10px;
+}
+
+#cancelButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+
+/* ปรับตำแหน่งฟอร์มให้แสดงผลได้ดีขึ้น */
+#imageForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+    animation: slideIn 1s ease-in-out;
+    position: sticky;
+    top: 20px;
+    background: rgb(6, 6, 115); /* เปลี่ยนค่าความโปร่งแสงจาก 0.1 เป็น 1 */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* เพิ่มสไตล์สำหรับการแสดงผลแบบลิส */
+#gallery.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#gallery.list-view .image-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+#gallery.list-view .image-card img {
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+#gallery.list-view .image-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+#gallery.list-view .image-card p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+#gallery.list-view .image-card .actions {
+    margin-left: auto;
+}
+
+/* สไตล์สำหรับปุ่มสลับการแสดงผล */
+.view-toggle {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.view-toggle button {
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.view-toggle button.active {
+    background: linear-gradient(135deg, #4f9eb6, #041e3f);
+    border-color: transparent;
+}
+
+.view-toggle button:hover {
+    transform: translateY(-3px);
+}
+
+/* สไตล์สำหรับปุ่ม Add Image */
+.add-button {
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #041e3f, #00c6ff);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.add-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 8, 255, 0.4);
+}
+
+/* สไตล์สำหรับ Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.modal-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-actions button#confirmDeleteButton {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: #fff;
+}
+
+.modal-actions button#cancelDeleteButton {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+    color: #fff;
+}
+
+.modal-actions button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #searchInput, #imageForm input, #imageForm textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    #searchButton, #imageForm button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .image-card {
+        padding: 15px;
+    }
+
+    .image-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .image-card p {
+        font-size: 0.9rem;
+    }
+
+    .image-card button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}

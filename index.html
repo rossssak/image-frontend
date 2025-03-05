@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Abdulrosak's Website</h1>    
+
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search images...">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+
+        <!-- Toggle View Buttons -->
+        <div class="view-toggle">
+            <button id="gridViewButton" class="active"><i class="fas fa-th-large"></i> Grid</button>
+            <button id="listViewButton"><i class="fas fa-list"></i> List</button>
+        </div>
+
+        <!-- Image Form -->
+        <form id="imageForm" style="display: none;">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="Enter title" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" placeholder="Enter description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="imageUrl">Image URL</label>
+                <input type="text" id="imageUrl" placeholder="Enter image URL" required>
+            </div>
+            <div id="formActions">
+                <button type="submit" id="submitButton">Update Image</button>
+                <button type="button" id="cancelButton">Cancel</button>
+            </div>
+        </form>
+
+        <!-- Add Image Button -->
+        <button id="addImageButton" class="add-button"><i class="fas fa-plus"></i> Add Image</button>
+
+        <!-- Gallery -->
+        <div id="gallery" class="grid-view"></div>
+    </div>
+
+    <!-- Modal สำหรับการยืนยันการลบ -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <p>⚠️ คุณแน่ใจหรือไม่ว่าต้องการลบรูปภาพนี้ ?</p>
+            <p>การลบทิ้งครั้งนี้คุณไม่สามารถกู้คืนได้อีกในภายหลัง ก็เหมือนที่คุณทิ้งเขาแล้วเขาก็ไม่กลับมาหาคุณได้อีกแล้ว🫵🤦‍♂️</p>
+            <div class="modal-actions">
+                <button id="confirmDeleteButton">ยืนยัน</button>
+                <button id="cancelDeleteButton">ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
