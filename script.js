@@ -1,4 +1,4 @@
-const API_URL = 'https://image-gallery-backend-9h12.onrender.com/images'; // แทนที่ด้วย URL ของ Backend ที่ Deploy แล้ว
+const API_URL = 'https://image-backend-dr8r.onrender.com/images'; // แทนที่ด้วย URL ของ Backend ที่ Deploy แล้ว
 
 let editingId = null; // เก็บ ID ของรูปภาพที่กำลังแก้ไข
 let deleteId = null; // เก็บ ID ของรูปภาพที่ต้องการลบ
