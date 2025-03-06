@@ -101,7 +101,7 @@ body {
     animation: slideIn 1s ease-in-out;
     position: sticky;
     top: 20px;
-    background: rgb(6, 6, 115); /* เปลี่ยนค่าความโปร่งแสงจาก 0.1 เป็น 1 */
+    background: rgb(6, 6, 115);
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -197,7 +197,8 @@ body {
   
   .image-card .actions {
     display: flex;
-    gap: 10px;
+    flex-direction: column; /* เปลี่ยนเป็นแนวตั้ง */
+    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
     margin-top: 20px;
   }
   
@@ -329,29 +330,30 @@ body {
     /* เพิ่ม CSS สำหรับการแสดงผลแบบ List บนมือถือ */
     #gallery.list-view .image-card {
       display: flex;
-      flex-direction: column; /* จัดเรียงเนื้อหาในแนวตั้ง */
-      align-items: flex-start; /* จัดเนื้อหาไปทางซ้าย */
-      gap: 10px; /* ระยะห่างระหว่างเนื้อหา */
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
       padding: 15px;
     }
   
     #gallery.list-view .image-card img {
-      width: 100%; /* ให้รูปภาพเต็มความกว้าง */
-      height: auto; /* ความสูงปรับตามอัตราส่วน */
+      width: 100%;
+      height: auto;
       border-radius: 10px;
     }
   
     #gallery.list-view .image-card .actions {
       display: flex;
-      gap: 10px; /* ระยะห่างระหว่างปุ่ม */
-      margin-top: 10px; /* ระยะห่างจากเนื้อหาด้านบน */
-      width: 100%; /* ให้ปุ่มเต็มความกว้าง */
-      justify-content: flex-start; /* จัดปุ่มไปทางซ้าย */
+      flex-direction: column; /* เปลี่ยนเป็นแนวตั้ง */
+      gap: 10px;
+      margin-top: 10px;
+      width: 100%;
+      justify-content: flex-start;
     }
   
     #gallery.list-view .image-card button {
-      padding: 10px 15px; /* เพิ่มขนาด padding */
-      font-size: 1rem; /* เพิ่มขนาด font */
+      padding: 10px 15px;
+      font-size: 1rem;
     }
   }
   
@@ -373,7 +375,7 @@ body {
     box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
   }
   
-  /* เพิ่มสไตล์สำหรับการแสดงผลแบบลิส */
+  /* สไตล์สำหรับการแสดงผลแบบลิส */
   #gallery.list-view {
     display: flex;
     flex-direction: column;
