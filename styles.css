@@ -331,6 +331,35 @@ body {
       flex-direction: column; /* แนวตั้ง */
       gap: 10px; /* ระยะห่างระหว่างปุ่ม */
     }
+  
+    /* ปรับการแสดงผลแบบ List บนมือถือ */
+    #gallery.list-view .image-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 15px;
+    }
+  
+    #gallery.list-view .image-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  
+    #gallery.list-view .image-card .actions {
+      display: flex;
+      flex-direction: column; /* แนวตั้ง */
+      gap: 10px;
+      margin-top: 10px;
+      width: 100%;
+      justify-content: flex-start;
+    }
+  
+    #gallery.list-view .image-card button {
+      padding: 10px 15px;
+      font-size: 1rem;
+    }
   }
   
   /* เพิ่มสไตล์สำหรับปุ่ม Cancel */
