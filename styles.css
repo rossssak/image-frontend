@@ -197,8 +197,7 @@ body {
   
   .image-card .actions {
     display: flex;
-    flex-direction: column; /* เปลี่ยนเป็นแนวตั้ง */
-    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
+    gap: 10px;
     margin-top: 20px;
   }
   
@@ -327,33 +326,10 @@ body {
       font-size: 0.9rem;
     }
   
-    /* เพิ่ม CSS สำหรับการแสดงผลแบบ List บนมือถือ */
-    #gallery.list-view .image-card {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 15px;
-    }
-  
-    #gallery.list-view .image-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-  
-    #gallery.list-view .image-card .actions {
-      display: flex;
-      flex-direction: column; /* เปลี่ยนเป็นแนวตั้ง */
-      gap: 10px;
-      margin-top: 10px;
-      width: 100%;
-      justify-content: flex-start;
-    }
-  
-    #gallery.list-view .image-card button {
-      padding: 10px 15px;
-      font-size: 1rem;
+    /* ปรับปุ่ม "แก้ไข" และ "ลบ" ให้แสดงผลในแนวตั้งบนมือถือ */
+    .image-card .actions {
+      flex-direction: column; /* แนวตั้ง */
+      gap: 10px; /* ระยะห่างระหว่างปุ่ม */
     }
   }
   
